@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <title>Dubai Hotels</title>
+   <title>Toronto Plaques</title>
   </head>
 
   <body onload = "loadMap()">
-    <h2>Dubai Hotels</h2>
+    <h2>Toronto Plaques</h2>
     <div id = "map" style = "width:640px; height:480px;"></div>
       <script>
-
         // fake JSON call
         function getJSONMarkers() {
           const markers = [
@@ -27,7 +26,6 @@
           ];
           return markers;
         }
-
         function loadMap() {
           // Initialize Google Maps
           const mapOptions = {
@@ -35,10 +33,8 @@
             zoom: 11
           }
           const map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
           // Load JSON Data
           const hotelMarkers = getJSONMarkers();
-
           // Initialize Google Markers
           for(hotel of hotelMarkers) {
             let marker = new google.maps.Marker({
@@ -49,6 +45,6 @@
           }
         }
       </script>
-      <script src = "https://maps.googleapis.com/maps/api/js"></script>
+      <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBa_bunFuXkAoOFSowzyaGo7etwF2RpJGY&callback=initMap"></script>
   </body>
 </html>
