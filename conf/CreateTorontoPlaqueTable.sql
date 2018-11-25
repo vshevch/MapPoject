@@ -1,4 +1,4 @@
-create table TorontoPlaques (
+CREATE TABLE Toronto_Plaques (
 ID SERIAL,
 Accession VARCHAR (20),
 Plaque_Subject VARCHAR (100),
