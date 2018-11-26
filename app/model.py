@@ -5,7 +5,7 @@ import queries
 def getDB():
     db = psycopg2.connect(
         host="localhost",
-        database="mapproject",
+        database="map_project",
         user="vladshev",
         password="root",
     )
@@ -27,4 +27,9 @@ def removeTerm(t):
 def allTerms():
     db = getDB()
     db.execute(queries.getAll)
+    return db.fetchall()
+
+def allMap():
+    db = getDB()
+    db.execute(queries.getMap)
     return db.fetchall()
