@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <style>
+      #mapID {
+          position: absolute;
+          top:0;
+          right:0;
+          bottom:0;
+          left:0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="mapID"> </div>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script>
+      //instantiate leaflet map
+      var map = L.map('mapID') //map must reference the div tag
+        .setView([51.505, -0.09], 13); // setView command 13 is referencing zoom level. Range from 0 to 20
+
+      L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+      //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {  // <- Alternative Map
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map); // add to the map
+
+      L.marker([51.5, -0.09]).addTo(map)
+      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.') // <- popup is opened when you click on it
+      // .openPopup(); // <- popup is opened when the page is loaded
+
+    </script>
+  </body>
+</html>
