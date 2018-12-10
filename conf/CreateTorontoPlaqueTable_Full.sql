@@ -24,7 +24,7 @@ Last_Maintenances VARCHAR (100),
 Applicant VARCHAR(250),
 Funding_1 VARCHAR(250),
 Funding_2 VARCHAR(250),
-Field_1 VARCHAR(250),
+Field_1 VARCHAR(250), --PDF URL
 Notes TEXT,
 Updated_By VARCHAR(250),
 Updated_On DATE,
