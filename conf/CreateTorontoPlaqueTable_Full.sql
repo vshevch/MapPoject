@@ -15,7 +15,7 @@ Address VARCHAR (100),
 Longitude DOUBLE PRECISION,
 Latitude DOUBLE PRECISION,
 Material_Size VARCHAR (5),
-Mount_Type VARCHAR (50)
+Mount_Type VARCHAR (50),
 Designated_Listed VARCHAR (5),
 Status_Year SMALLINT,
 Unveiling BOOLEAN,
