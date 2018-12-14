@@ -1,1 +1,3 @@
-COPY toronto_plaques FROM '/home/vladshev/HeritageTorontoPlaqueDatabase.csv' DELIMITERS ';' csv;
+-- Load CSV file into Postgresql
+
+COPY <table_name> FROM '<file.csv>' DELIMITERS ';' csv;
